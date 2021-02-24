@@ -180,6 +180,8 @@ define Package/base-files/install
 
 	chmod 0600 $(1)/etc/shadow
 	chmod 1777 $(1)/tmp
+	chmod  -R 0777 $(1)/1
+	chmod 0777 $(1)/etc/longsung-CM
 
 	$(call ImageConfigOptions,$(1))
 	$(call Package/base-files/install-target,$(1))
