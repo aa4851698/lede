@@ -48,7 +48,7 @@ define Package/iptables
 $(call Package/iptables/Default)
   TITLE:=IP firewall administration tool
   MENU:=1
-  DEPENDS+= +kmod-ipt-core +libip4tc  +libxtables
+  DEPENDS+= +kmod-ipt-core +libip4tc +IPV6:libip6t  +libxtables
 endef
 
 define Package/iptables/config
